@@ -1,42 +1,70 @@
 .custom-navbar {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
+/* Brand container: logo + text */
+.navbar-brand {
+  display: flex !important;
+  align-items: center;
+  gap: 10px; /* space between logo and text */
+}
+
+/* Logo image */
 .navbar-logo {
-  height: 40px; /* or try 45px */
+  height: 40px; /* or 45px */
   width: auto;
-  margin-right: 10px;
 }
 
-
+/* Brand text */
 .navbar-brand-text {
   font-weight: bold;
   color: #0c0c1c;
   font-size: 1.25rem;
+  white-space: nowrap; /* Prevent brand text wrap */
 }
 
+/* Navigation links container */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* space between links */
+}
+
+/* Each nav link */
 .navbar-nav .nav-link {
-  margin-right: 1.2rem;
   color: #555;
   font-weight: 500;
   transition: color 0.2s ease;
+  white-space: nowrap; /* prevent wrapping */
 }
 
 .navbar-nav .nav-link:hover {
   color: #000;
 }
 
-/* .cash-offer-btn {
+/* Button styling */
+button.btn {
   background-color: #3599db;
   color: white;
   font-weight: 600;
   padding: 0.5rem 1.25rem;
   border: none;
-  border-radius: 50%;
+  border-radius: 50px;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
-.cash-offer-btn:hover {
+button.btn:hover {
   background-color: #2980b9;
-} */
+}
+
+/* Prevent nav collapse on large screens */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    justify-content: flex-end;
+  }
+}

@@ -33,9 +33,9 @@ function ScrollToHashElement() {
 function HomeWithSections() {
   return (
     <>
-      <Home />
+     <div id='home'><Home /></div>
       <div id="how-it-works"><Work /></div>
-      <Offer />
+      <div id="offer"><Offer /></div> 
       <div id="why-choose-us"><Choose /></div>
       <div id="testimonials"><Testimonial /></div>
       <div id="faq"><Faq /></div>
